@@ -1,9 +1,9 @@
+require 'pry'
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
+# this is cool
 class Song
-
-
   def self.table_name
     self.to_s.downcase.pluralize
   end
@@ -58,7 +58,5 @@ class Song
     DB[:conn].execute(sql)
   end
 
+  binding.pry
 end
-
-
-
